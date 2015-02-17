@@ -6,6 +6,7 @@
   <h1> Chroma Market </h1>
   <h2> Crowd sourced IPO funding </h2>
 
+  {{> new_campaign}}
   {{> market}}
 </body>
 
@@ -22,4 +23,21 @@
   <h1>{{name}}</h1>
   <!-- <h2>${{total_contributions}} / ${{threshold}} raised so far! </h2> -->
   <p>{{blurb}}</p>
+</template>
+
+<template name="new_campaign">
+  <form class="new_campaign">
+    <br>
+    <input type="text" name="name" placeholder="name" />
+    <br>
+    <input type="email" name="email" placeholder="email" />
+    <br>
+    <input type="string" name="cc" placeholder="cc" />
+    <br>
+    <input type="string" name="security" placeholder="3 digits on back thingey" />
+    <br>
+    <input type="number" name="amount" placeholder="amount" step="any" />
+    <br>
+    <input type="submit" value="New Campaign">
+  </form>
 </template>
