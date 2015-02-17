@@ -1,10 +1,54 @@
 <head>
-  <title>Chroma Market</title>
+  <title>Chroma</title>
 </head>
 
 <body>
-  <h1> Chroma Market </h1>
-  <h2> Crowd sourced IPO funding </h2>
+  <h1> Chroma </h1>
+  <h2> Venture Capitalism, for the Masses </h2>
+
+  <p>
+    Chroma is crowdfunding, the way it was <i>meant</i> to be. With other crowdfunding platforms, you can only donate your money. You might get a dev kit or some swag or even dinner with the team. But with Chroma, you are no longer just a "donater"- you are an <b>investor.</b> And that means that venture capitalism is no longer the domain of the ultra-wealthy. You can find investment for a small idea- your first album or maybe a small business. Or you might find a smart idea, get in on the ground floor and turn your tax return into tidy source of automatic income!
+  </p>
+
+  <h3>Chroma is easy to setup</h3>
+  <ol>
+    <li>
+      Fill in some money details, like your bank account and how much money you need to raise.
+    </li>
+    <li>
+      We assemble and deploy your campaign
+    </li>
+    <li>
+      You'll get an email that lets you sign into your new campaign
+    </li>
+    <li>
+      Tweak your campaigns style to suit your needs
+    </li>
+    <li>
+      Activate the campaign!
+    </li>
+    <li>
+      ???
+    </li>
+    <li>
+      Profit!
+    </li>
+  </ol>
+
+  <h3>Chroma respects your privacy</h3>
+  <p>
+    Instead of a single app, Chroma is a federated marketplace of independent agents. Each campaign is entirely sulf-sustaining, sandboxed and safe. And make no mistake about it- We here at Chroma do NOT have access to your financial information. Your campaign is *yours.* We just set it up.
+  </p>
+
+  <h3>Chroma is free- sort of</h3>
+  <p>
+    While all Chroma software is FOSS, campaigns hosted on the Chroma Market are subject to a small fee, based on the success of your campaign. Basically, we want a little bit of equity- about 5%- of every campaign funded. We think that's fair.
+  </p>
+
+  <h3>Chroma will make your wildest dreams come true</h3>
+  <p>
+    Well, as long as your wildest dreams are safe, sane, and legal. Otherwise, if enough people are willing to fund it, you can raise money for nearly anything. Your passion project finally sees the light of day and your investors grow their wealth. Everybody wins!
+  </p>
 
   {{> new_campaign}}
   {{> market}}
@@ -26,18 +70,23 @@
 </template>
 
 <template name="new_campaign">
-  <form class="new_campaign">
-    <br>
-    <input type="text" name="name" placeholder="name" />
-    <br>
-    <input type="email" name="email" placeholder="email" />
-    <br>
-    <input type="string" name="cc" placeholder="cc" />
-    <br>
-    <input type="string" name="security" placeholder="3 digits on back thingey" />
-    <br>
-    <input type="number" name="amount" placeholder="amount" step="any" />
-    <br>
-    <input type="submit" value="New Campaign">
-  </form>
+  <a href="https://docs.google.com/a/chroma.io/forms/d/1rs5HPKZgMDJTtnm675uZGKD-Oyq48wt8TpYCEKaiKQo/viewform" > Let's get started! </a>
+
+  {{#if activeModal}}
+    <form class="new_campaign modal">
+      <br>
+      <input type="text" name="name" placeholder="name" />
+      <br>
+      <input type="email" name="email" placeholder="email" />
+      <br>
+      <input type="string" name="cc" placeholder="cc" />
+      <br>
+      <input type="string" name="security" placeholder="3 digits on back thingey" />
+      <br>
+      <input type="number" name="amount" placeholder="amount" step="any" />
+      <br>
+      <input type="submit" value="New Campaign">
+    </form>
+  {{/if}}
+
 </template>
