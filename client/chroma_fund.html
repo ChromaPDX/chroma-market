@@ -1,0 +1,25 @@
+<head>
+  <title>Chroma Market</title>
+</head>
+
+<body>
+  <h1> Chroma Market </h1>
+  <h2> Crowd sourced IPO funding </h2>
+
+  {{> market}}
+</body>
+
+<template name="market">
+  <h3> Current campaigns</h3>
+  <ul class="campaigns" >
+    {{#each campaigns}}
+      <li>{{> campaign}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="campgaign">
+  <!-- <h1>{{campaign_name}}</h1> -->
+  <!-- <h2>${{total_contributions}} / ${{threshold}} raised so far! </h2> -->
+  <!-- <p>{{campaign_blurb}}</p> -->
+</template>
